@@ -1,0 +1,7 @@
+.carts-list {
+    padding: 20px;
+}
+
+.carts-list:last-child {
+    padding-bottom: 0;
+}

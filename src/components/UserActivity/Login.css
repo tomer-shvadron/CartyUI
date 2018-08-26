@@ -1,0 +1,28 @@
+.login {
+    width: 500px;
+}
+
+.login-label {
+    float: left;
+    margin-bottom: 5px;
+}
+
+.login-input {
+    width: 486px;
+    height: 36px;
+    padding: 5px;
+}
+
+.login-submit {
+    width: 500px;
+    color: white;
+    border: none;
+    height: 50px;
+    outline: none;
+    font-size: 1.25em;
+    background-color: #4B9B4F;
+}
+
+.login-submit:active {
+    background-color: #428A46;
+}
