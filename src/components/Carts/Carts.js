@@ -23,7 +23,7 @@ class Carts extends Component {
 
     render() {
         return (
-            <div className="carts">
+            <div className="carts centered">
                 <CartsHeader/>
                 <LoadingIndication isLoading={this.state.loading}/>
                 {
