@@ -16,9 +16,7 @@ class Carts extends Component {
 
     componentWillMount() {
         CartsService.getAllCarts()
-            .then(carts => {
-                this.setState({carts: carts.data, loading: false});
-            });
+            .then(carts => this.setState({carts: carts.data, loading: false}));
     }
 
     render() {

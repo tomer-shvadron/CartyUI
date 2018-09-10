@@ -13,10 +13,8 @@ class Navbar extends Component {
         return (
             <ul className="carty-navbar bold">
                 {
-                    routes.map((routeId) => {
-                        var route = Consts.ROUTES.ALL_ROUTES.find((possibleRoute) => {
-                            return possibleRoute.id === routeId;
-                        });
+                    routes.map(routeId => {
+                        var route = Consts.ROUTES.ALL_ROUTES.find(possibleRoute => possibleRoute.id === routeId);
 
                         return (<CartyLink key={routeId} route={route}/>);
                     })

@@ -3,21 +3,13 @@ import AjaxService from './AjaxService';
 import StorageService from './StorageService';
 
 var UserService = {
-    isLoggedIn: () => {
-        return StorageService.exists(Consts.USER_KEY);
-    },
+    isLoggedIn: () => StorageService.exists(Consts.USER_KEY),
 
-    isLoggedOff: () => {
-        return !StorageService.exists(Consts.USER_KEY);
-    },
+    isLoggedOff: () => !StorageService.exists(Consts.USER_KEY),
 
-    getName: () => {
-        return (StorageService.get(Consts.USER_KEY)).name;
-    },
+    getName: () => (StorageService.get(Consts.USER_KEY)).name,
 
-    getUser: () => {
-        return (StorageService.get(Consts.USER_KEY)).user;
-    },
+    getUser: () => (StorageService.get(Consts.USER_KEY)).user,
 
     login: (credentials, callback) => {
         AjaxService

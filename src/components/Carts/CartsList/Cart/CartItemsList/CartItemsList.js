@@ -5,9 +5,9 @@ import CartItem from "./CartItem/CartItem";
 
 class CartItemsList extends Component {
     render() {
-        var cartItems = this.props.items.map((item, index) => {
-            return (<CartItem item={item} key={`cart-${this.props.cartId}-item-${index}`}/>);
-        });
+        var cartItems = this.props.items.map((item, index) =>
+            <CartItem item={item} key={`cart-${this.props.cartId}-item-${index}`}/>
+        );
 
         return (
             <div className="cart-items-list">

@@ -12,15 +12,11 @@ class Login extends Component {
         this.state = {email: '', password: ''};
     }
 
-    handleEmailChange = (event) => {
-        this.setState({email: event.target.value});
-    };
+    handleEmailChange = event => this.setState({email: event.target.value});
 
-    handlePasswordChange = (event) => {
-        this.setState({password: event.target.value});
-    };
+    handlePasswordChange = event => this.setState({password: event.target.value});
 
-    handleSubmit = (event) => {
+    handleSubmit = event => {
         event.preventDefault();
 
         var credentials = {
@@ -28,9 +24,7 @@ class Login extends Component {
             password: this.state.password
         };
 
-        UserService.login(credentials, () => {
-            this.props.history.push('/carts');
-        });
+        UserService.login(credentials, () => this.props.history.push('/carts'));
     };
 
     render() {
