@@ -14,7 +14,7 @@ class Carts extends Component {
         this.state = {carts: [], loading: true};
     }
 
-    componentWillMount() {
+    componentDidMount() {
         CartsService.getAllCarts()
             .then(carts => this.setState({carts: carts.data, loading: false}));
     }
